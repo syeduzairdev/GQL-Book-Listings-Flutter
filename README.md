@@ -1,4 +1,4 @@
-# gql_flutter_todo
+# GraphQL Book Lisitngs with Proper Providers or without Providers.
 
 In this flutter project we use GraphQL with backend as hasura.
 
