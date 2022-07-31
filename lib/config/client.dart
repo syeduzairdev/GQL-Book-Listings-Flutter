@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gql_flutter_todo/config/authToken.dart';
-import 'package:gql_flutter_todo/config/gql_string.dart';
+import 'package:gql_flutter_todo/config/gql_String.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 
 class Config {
@@ -27,16 +27,6 @@ class Config {
     config: const SocketClientConfig(
       autoReconnect: true,
       inactivityTimeout: Duration(seconds: 30),
-      // initialPayload: () async {
-      //   return {
-      //     'headers': {
-      //       // 'Authorization': _token,
-      //       'HASURA_GRAPHQL_UNAUTHORIZED_ROLE': 'anonymous',
-      //       // 'HASURA_GRAPHQL_ADMIN_SECRET':
-      //       // 'XkUKGyUWVF9xfipcUvs1gXwpJnu2AsAeNWMKFTlW46qWhqi0lZAAJQKDLrGXY1GV'
-      //     }
-      //   };
-      // },
     ),
   );
 
@@ -46,7 +36,6 @@ class Config {
   static ValueNotifier<GraphQLClient> initializeClient(String token) {
     _token = token;
     ValueNotifier<GraphQLClient> client = ValueNotifier(
-      // GraphQLClient(cache: GraphQLCache(store: HiveStore()), link: link),
       GraphQLClient(
           cache: GraphQLCache(
             store: HiveStore(),
